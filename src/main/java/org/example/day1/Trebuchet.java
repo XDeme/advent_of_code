@@ -31,18 +31,17 @@ public class Trebuchet {
             char last = 0;
             for (int i = 0; i < line.length(); i++) {
                 char curr = line.charAt(i);
-                if(!(curr >= '0' && curr <= '9')) {
+                if(!Character.isDigit(curr)) {
                     continue;
                 }
-                else if(first == 0) {
+                else if(last == 0) {
                     first = curr;
+                    last = curr;
                 }
                 else {
                     last = curr;
                 }
             }
-            if(last == 0)
-                last = first;
             result += ((first - '0') * 10) + (last - '0');
         }
         return result;
@@ -55,24 +54,17 @@ public class Trebuchet {
             for (int i = 0; i < line.length(); i++) {
                 char curr = line.charAt(i);
                 var named_num = is_named_char(line.substring(i));
-                if(!(curr >= '0' && curr <= '9') && named_num == 0) {
+                if(!Character.isDigit(curr) && named_num == 0) {
                     continue;
                 }
-                else if(first == 0 && named_num != 0) {
-                    first = named_num;
-                }
-                else if(first == 0) {
-                    first = curr;
-                }
-                else if(named_num != 0) {
-                    last = named_num;
+                else if(last == 0) {
+                    first = named_num == 0 ? curr : named_num;
+                    last = named_num == 0 ? curr : named_num;
                 }
                 else {
-                    last = curr;
+                    last = named_num == 0 ? curr : named_num;
                 }
             }
-            if(last == 0)
-                last = first;
             result += ((first - '0') * 10) + (last - '0');
         }
         return result;
