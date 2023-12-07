@@ -2,6 +2,7 @@ package org.example;
 
 import org.example.day1.Trebuchet;
 import org.example.day2.CubeConumdrum;
+import org.example.day3.GearRatios;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -28,6 +29,8 @@ public class Main {
             case 2:
                 CubeConumdrum.setup();
                 break;
+            case 3:
+                GearRatios.setup();
             default:
                 System.out.println("Nothing selected");
         }

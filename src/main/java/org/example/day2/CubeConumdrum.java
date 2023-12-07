@@ -76,7 +76,7 @@ public class CubeConumdrum {
 
     public static void setup() {
         ArrayList<String> inputs = new ArrayList<>(100);
-        try(var br = new BufferedReader(new FileReader("src/main/resources/inputDay2.txt"))) {
+        try(var br = new BufferedReader(new FileReader("src/main/resources/2.txt"))) {
             String line;
             while((line = br.readLine()) != null) {
                 inputs.add(line);

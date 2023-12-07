@@ -73,7 +73,7 @@ public class Trebuchet {
     }
     public static void setup() {
         ArrayList<String> input = new ArrayList<>(1000);
-        try(var br = new BufferedReader(new FileReader("src/main/resources/inputDay1.txt"))) {
+        try(var br = new BufferedReader(new FileReader("src/main/resources/1.txt"))) {
             String line;
             while ((line = br.readLine()) != null) {
                 input.add(line);
