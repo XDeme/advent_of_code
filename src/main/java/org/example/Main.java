@@ -3,6 +3,7 @@ package org.example;
 import org.example.day1.Trebuchet;
 import org.example.day2.CubeConumdrum;
 import org.example.day3.GearRatios;
+import org.example.day4.Scratchcards;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -31,6 +32,8 @@ public class Main {
                 break;
             case 3:
                 GearRatios.setup();
+            case 4:
+                Scratchcards.setup();
             default:
                 System.out.println("Nothing selected");
         }
